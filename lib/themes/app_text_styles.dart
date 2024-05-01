@@ -33,4 +33,10 @@ class AppTextStyles {
           fontWeight: FontWeight.w600,
           fontFamily: "Poppins",
           color: AppColors.pureBlack);
+  static TextStyle fontSize25FontWeightW700FontFamilyPoppinsColorBlack =
+      const TextStyle(
+          fontSize: 25,
+          fontWeight: FontWeight.w700,
+          fontFamily: "Poppins",
+          color: AppColors.pureBlack);
 }
