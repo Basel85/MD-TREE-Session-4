@@ -19,13 +19,16 @@ class GenderCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-      child: Container(
-        decoration: BoxDecoration(
-            border: Border.all(
-                color: isSelected
-                    ? AppColors.pureBlack
-                    : AppColors.transparentColor,
-                width: 1)),
+      child: Card(
+        elevation: 0,
+        color: AppColors.transparentColor,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+          side: BorderSide(
+              color:
+                  isSelected ? AppColors.pureBlack : AppColors.transparentColor,
+              width: 2),
+        ),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [

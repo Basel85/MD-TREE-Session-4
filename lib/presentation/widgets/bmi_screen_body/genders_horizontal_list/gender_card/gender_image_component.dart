@@ -9,6 +9,8 @@ class GenderImageComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(10),
+      height: 150,
+      width: 150,
       decoration: BoxDecoration(
         color: AppColors.colorC2C2C2.withOpacity(0.27),
         borderRadius: BorderRadius.circular(10),

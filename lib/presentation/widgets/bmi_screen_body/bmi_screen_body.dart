@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:md_tree_session_4/helpers/app_assets.dart';
 import 'package:md_tree_session_4/presentation/widgets/bmi_screen_body/genders_horizontal_list/gender_card/gender_card.dart';
 import 'package:md_tree_session_4/presentation/widgets/bmi_screen_body/genders_horizontal_list/genders_horizontal_list.dart';
+import 'package:md_tree_session_4/presentation/widgets/bmi_screen_body/height_component/height_component.dart';
 
 class BMIScreenBody extends StatefulWidget {
   const BMIScreenBody({super.key});
@@ -12,7 +13,7 @@ class BMIScreenBody extends StatefulWidget {
 
 class _BMIScreenBodyState extends State<BMIScreenBody> {
   bool isMale = true;
-  num height = 145;
+  double height = 145;
   num weight = 70;
   int age = 25;
 
@@ -49,6 +50,12 @@ class _BMIScreenBodyState extends State<BMIScreenBody> {
             )
           ],
         ),
+        const SizedBox(height: 16),
+        HeightComponent(height: height, onChanged: (value) {
+          setState(() {
+            height = value;
+          });
+        }),
       ]),
     );
   }
