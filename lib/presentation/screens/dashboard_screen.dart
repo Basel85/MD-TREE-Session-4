@@ -6,8 +6,10 @@ class DashboardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: DashboardScreenBody(),
+    return const SafeArea(
+      child: Scaffold(
+        body: DashboardScreenBody(),
+      ),
     );
   }
 }

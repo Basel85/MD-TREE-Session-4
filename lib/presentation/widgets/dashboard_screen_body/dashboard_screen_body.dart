@@ -10,13 +10,16 @@ class DashboardScreenBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        WelcomeText(),
-        UsernameText(),
-        Expanded(child: Center(child: CalculateYourBMIButton()))
-      ],
+    return const Padding(
+      padding: EdgeInsets.only(top: 90, left: 20, right: 20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          WelcomeText(),
+          UsernameText(),
+          Expanded(child: Center(child: CalculateYourBMIButton()))
+        ],
+      ),
     );
   }
 }
