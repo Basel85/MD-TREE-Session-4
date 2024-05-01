@@ -59,4 +59,10 @@ class AppTextStyles {
           fontWeight: FontWeight.w400,
           fontFamily: "Poppins",
           color: AppColors.colorC62FF8);
+  static TextStyle fontSize60FontWeightW700FontFamilyPoppinsColorBlack =
+      const TextStyle(
+          fontSize: 60,
+          fontWeight: FontWeight.w700,
+          fontFamily: "Poppins",
+          color: AppColors.pureBlack);
 }
