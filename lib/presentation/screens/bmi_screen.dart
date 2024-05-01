@@ -10,6 +10,7 @@ class BMIScreen extends StatelessWidget {
     return const Scaffold(
       appBar: CustomAppBar(
         appBarTitle: "BMI CALCULATOR",
+        isBackButtonVisible: true,
       ),
       body: BMIScreenBody(),
     );

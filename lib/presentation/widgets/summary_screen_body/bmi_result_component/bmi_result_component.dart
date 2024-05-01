@@ -11,7 +11,7 @@ class BMIResultComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: AppColors.colorFFB6B6,
         borderRadius: BorderRadius.circular(10),

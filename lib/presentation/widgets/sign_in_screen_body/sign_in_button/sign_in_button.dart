@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:md_tree_session_4/presentation/screens/dashboard_screen.dart';
 import 'package:md_tree_session_4/presentation/widgets/custom_button.dart';
 import 'package:md_tree_session_4/presentation/widgets/sign_in_screen_body/sign_in_button/sign_in_text.dart';
 
@@ -8,7 +9,10 @@ class SignInButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomButton(
-      onPressed: () {},
+      onPressed: () {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const DashboardScreen()));
+      },
       buttonContent: const SignInText(),
     );
   }

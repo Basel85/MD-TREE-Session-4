@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:md_tree_session_4/helpers/app_assets.dart';
+import 'package:md_tree_session_4/presentation/screens/summary_screen.dart';
 import 'package:md_tree_session_4/presentation/widgets/bmi_screen_body/calculate_bmi_text.dart';
 import 'package:md_tree_session_4/presentation/widgets/bmi_screen_body/genders_horizontal_list/gender_card/gender_card.dart';
 import 'package:md_tree_session_4/presentation/widgets/bmi_screen_body/genders_horizontal_list/genders_horizontal_list.dart';
 import 'package:md_tree_session_4/presentation/widgets/bmi_screen_body/height_component/height_component.dart';
 import 'package:md_tree_session_4/presentation/widgets/bmi_screen_body/weight_age_component/weight_age_component.dart';
 import 'package:md_tree_session_4/presentation/widgets/custom_button.dart';
+import 'package:md_tree_session_4/utils/bmi_category_getter.dart';
 
 class BMIScreenBody extends StatefulWidget {
   const BMIScreenBody({super.key});
@@ -14,7 +16,7 @@ class BMIScreenBody extends StatefulWidget {
   State<BMIScreenBody> createState() => _BMIScreenBodyState();
 }
 
-class _BMIScreenBodyState extends State<BMIScreenBody> {
+class _BMIScreenBodyState extends State<BMIScreenBody> with BMICategoryGetter {
   bool isMale = true;
   double height = 145;
   int weight = 70;
@@ -102,6 +104,11 @@ class _BMIScreenBodyState extends State<BMIScreenBody> {
           onPressed: () {
             // calculate bmi
             final bmiResult = weight / ((height / 100) * (height / 100));
+            String bmiCategory = getBMICategory(bmiResult);
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return SummaryScreen(
+                  bmiResult: bmiResult, bmiCategory: bmiCategory);
+            }));
           },
           buttonContent: const CalculateBMIText(),
         )

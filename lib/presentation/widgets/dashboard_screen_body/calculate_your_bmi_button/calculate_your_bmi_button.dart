@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:md_tree_session_4/presentation/screens/bmi_screen.dart';
 import 'package:md_tree_session_4/presentation/widgets/custom_button.dart';
 import 'package:md_tree_session_4/presentation/widgets/dashboard_screen_body/calculate_your_bmi_button/bmi_image.dart';
 import 'package:md_tree_session_4/presentation/widgets/dashboard_screen_body/calculate_your_bmi_button/calculate_your_bmi_text.dart';
@@ -20,6 +21,9 @@ class CalculateYourBMIButton extends StatelessWidget {
             BMIImage()
           ],
         ),
-        onPressed: () {});
+        onPressed: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const BMIScreen()));
+        });
   }
 }
