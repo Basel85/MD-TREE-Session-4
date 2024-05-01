@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:md_tree_session_4/presentation/widgets/bmi_screen_body/height_component/height_number_component/height_number_component.dart';
+import 'package:md_tree_session_4/presentation/widgets/bmi_screen_body/height_component/height_slider.dart';
 import 'package:md_tree_session_4/presentation/widgets/bmi_screen_body/height_component/height_text.dart';
 import 'package:md_tree_session_4/themes/app_colors.dart';
 
@@ -19,7 +20,7 @@ class HeightComponent extends StatelessWidget {
         children: [
           const HeightText(),
           HeightNumberComponent(height: height),
-          Slider(min: 0, max: 300, value: height, onChanged: onChanged)
+          HeightSlider(height: height, onChanged: onChanged)
         ],
       ),
     );
