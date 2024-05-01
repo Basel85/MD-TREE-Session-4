@@ -8,7 +8,9 @@ class BMIScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      appBar: CustomAppBar(appBarTitle: "BMI CALCULATOR"),
+      appBar: CustomAppBar(
+        appBarTitle: "BMI CALCULATOR",
+      ),
       body: BMIScreenBody(),
     );
   }
