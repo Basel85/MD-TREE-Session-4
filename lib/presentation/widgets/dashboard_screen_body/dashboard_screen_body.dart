@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:md_tree_session_4/presentation/widgets/dashboard_screen_body/calculate_your_bmi_button.dart';
+import 'package:flutter/widgets.dart';
+import 'package:md_tree_session_4/presentation/widgets/dashboard_screen_body/calculate_your_bmi_button/calculate_your_bmi_button.dart';
 import 'package:md_tree_session_4/presentation/widgets/dashboard_screen_body/username_text.dart';
 import 'package:md_tree_session_4/presentation/widgets/dashboard_screen_body/welcome_text.dart';
 
@@ -13,7 +15,7 @@ class DashboardScreenBody extends StatelessWidget {
       children: <Widget>[
         WelcomeText(),
         UsernameText(),
-        CalculateYouBMIButton()
+        Expanded(child: Center(child: CalculateYourBMIButton()))
       ],
     );
   }
