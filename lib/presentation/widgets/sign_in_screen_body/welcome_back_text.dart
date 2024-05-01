@@ -9,6 +9,7 @@ class WelcomeBackText extends StatelessWidget {
     return const Text(
       "Welcome Back!!",
       style: AppTextStyles.fontSize20FontWeightW600FontFamilyPoppinsColorBlack,
+      textAlign: TextAlign.center,
     );
   }
 }
